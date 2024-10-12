@@ -35,5 +35,5 @@ To run the project locally, you'll need:
 2.Navigate to the project directory:
 ```bash
    cd weather-app
-                       
-
+```
+3.run index.html
