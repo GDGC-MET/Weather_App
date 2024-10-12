@@ -35,6 +35,6 @@ git clone https://github.com/your-username/weather-app.git
 ```
 2.Navigate to the project directory:
 ```bash
-   cd weather-app
+cd weather-app
 ```
 3.run index.html
