@@ -30,8 +30,9 @@ To run the project locally, you'll need:
 ### Installation
 
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/weather-app.git
+```bash
+git clone https://github.com/your-username/weather-app.git
+```
 2.Navigate to the project directory:
 ```bash
    cd weather-app
