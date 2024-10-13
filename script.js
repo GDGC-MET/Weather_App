@@ -25,7 +25,6 @@ async function checkWeather(city) {
     document.querySelector(".wind").innerHTML = data.wind.speed + " km/h";
 
 // Conditions for to check and display relevant image according to the weather conditions
-
     switch(data.weather[0].main) {
         case "Clouds":
             weatherIcon.src = "images/clouds.png";
