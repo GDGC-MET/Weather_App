@@ -60,14 +60,57 @@ async function checkWeather(city){
 
 // Event listener for the button
 
-searchBtn.addEventListener("click", ()=>{
-    checkWeather(searchBox.value);
-})
+// searchBtn.addEventListener("click", ()=>{
+//     checkWeather(searchBox.value);
+// })
 
 // Enter button(keyCode = 13) event listener
 
+// searchBox.addEventListener('keyup', function(event) {
+//     if (event.keyCode === 13) {
+//         checkWeather(searchBox.value);
+//     }
+// });
+
+
+// List of cities for suggestion
+const cities = ["New York", "New Delhi", "London", "Tokyo", "Paris", "Berlin", "Sydney", "Moscow", "Beijing", "Rome"];
+
+// Elements
+const suggestionsList = document.getElementById("suggestions");
+
+// Event listener for the search box to show suggestions
+searchBox.addEventListener('input', function() {
+    const inputValue = searchBox.value.toLowerCase();
+    suggestionsList.innerHTML = ""; // Clear previous suggestions
+
+    if (inputValue) {
+        const filteredCities = cities.filter(city => city.toLowerCase().startsWith(inputValue));
+        
+        // Add filtered cities to suggestions list
+        filteredCities.forEach(city => {
+            const listItem = document.createElement('li');
+            listItem.textContent = city;
+            suggestionsList.appendChild(listItem);
+
+            // Event listener for suggestion click
+            listItem.addEventListener('click', function() {
+                searchBox.value = city; // Set search box to clicked city
+                suggestionsList.innerHTML = ""; // Clear suggestions
+            });
+        });
+    }
+});
+
+// Hide suggestions when search button is clicked
+searchBtn.addEventListener('click', () => {
+    suggestionsList.innerHTML = "";
+    checkWeather(searchBox.value);
+});
+
+// Hide suggestions when the Enter key is pressed
 searchBox.addEventListener('keyup', function(event) {
     if (event.keyCode === 13) {
-        checkWeather(searchBox.value);
+        suggestionsList.innerHTML = "";
     }
 });
