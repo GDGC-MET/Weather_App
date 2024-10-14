@@ -4,20 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
-
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="w-card">
+
+        <!-- Theme toggle buttons -->
+        <div class="theme-toggle">
+            <button id="light-theme">Light Theme</button>
+            <button id="dark-theme">Dark Theme</button>
+        </div>
 
         <div class="searchbox">
             <input type="text" placeholder="Enter city name" spellcheck="false">
             <button>Search</button>
         </div>
         <div class="error">
-            <p>Invalid City name </p>
+            <p>Invalid City name</p>
         </div>
 
         <div class="weather">
@@ -41,11 +45,16 @@
                     </div>
                 </div>
             </div>
-            
         </div>
+
+        <!-- Favorites section -->
+        <div class="favorites">
+            <h3>Favorite Locations</h3>
+            <ul id="favorites-list"></ul>
+        </div>
+        
     </div>
 
-<script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>
