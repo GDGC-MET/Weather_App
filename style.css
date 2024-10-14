@@ -77,6 +77,14 @@ button:hover{
     align-items: center;
     text-align: left;
 }
+.col1
+{
+	 display: flex;
+	 align-items: center;
+}
+.col1 img{
+    margin-right: 12px
+}
 .column img{
     width: 50px;
     margin-right: 12px
