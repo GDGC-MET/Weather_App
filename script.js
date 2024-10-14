@@ -112,7 +112,6 @@ function showError(error) {
             break;
     }
 }
-
 // Automatically fetch weather for the current location when the page loads
 window.onload = function () {
     if (navigator.geolocation) {
