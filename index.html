@@ -6,16 +6,54 @@
     <title>Weather App</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="w-card">
 
         <div class="searchbox">
-            <input type="text" placeholder="Enter city name" spellcheck="false">
+            <input list="city-list" type="text" placeholder="Enter city name" spellcheck="false">
+            <datalist id="city-list">
+                <option value="Mumbai">
+                    <option value="Pune">
+                    <option value="Nagpur">
+                    <option value="Nashik">
+                    <option value="Thane">
+                    <option value="Aurangabad">
+                    <option value="Solapur">
+                    <option value="Kolhapur">
+                    <option value="Amravati">
+                    <option value="Nanded">
+                    <option value="Sangli">
+                    <option value="Jalgaon">
+                    <option value="Akola">
+                    <option value="Latur">
+                    <option value="Ahmednagar">
+                    <option value="Dhule">
+                    <option value="Chandrapur">
+                    <option value="Beed">
+                    <option value="Parbhani">
+                    <option value="Satara">
+                    <option value="Bhiwandi">
+                    <option value="Malegaon">
+                    <option value="Ratnagiri">
+                    <option value="Wardha">
+                    <option value="Yavatmal">
+                    <option value="Gondia">
+                    <option value="Baramati">
+                    <option value="Panvel">
+                    <option value="Alibag">
+                    <option value="Kalyan">
+                    <option value="Ulhasnagar">
+                    <option value="Vasai-Virar">
+                    <option value="Mira-Bhayandar">
+                    <option value="Palghar">
+                    <option value="Navi Mumbai">
+                    
+            </datalist>
             <button>Search</button>
         </div>
+
         <div class="error">
             <p>Invalid City name </p>
         </div>
