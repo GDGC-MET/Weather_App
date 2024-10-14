@@ -16,7 +16,7 @@ A simple weather app that provides real-time weather information for any locatio
 
 ## Demo
 
-[Link to your live project or a screenshot]
+[Screen Shot](file:///C:/Users/Admin/Downloads/Weather_App-main/Weather_App-main/index.html)
 
 ## Getting Started
 
