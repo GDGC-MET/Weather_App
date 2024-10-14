@@ -4,14 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
-
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="w-card">
-
         <div class="searchbox">
             <input type="text" placeholder="Enter city name" spellcheck="false">
             <button>Search</button>
@@ -24,7 +21,7 @@
             <img src="images/clouds.png" alt="" class="weather-icon">
             <h2 class="temperature" id="temp">22°c</h2>
             <h2 class="city" id="city-name">New Delhi</h2>
-            
+
             <div class="additional-details">
                 <div id="col1" class="column">
                     <img src="images/humidity.png" alt="" id="humidity-img">
@@ -41,11 +38,17 @@
                     </div>
                 </div>
             </div>
-            
+        </div>
+
+        <!-- Section for 7-day forecast -->
+        <div class="forecast">
+            <h3>7-Day Forecast</h3>
+            <div class="forecast-container" id="forecast-container">
+                <!-- Forecast days will be injected here -->
+            </div>
         </div>
     </div>
 
-<script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>

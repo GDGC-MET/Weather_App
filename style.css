@@ -1,15 +1,16 @@
-*{
+/* General styles */
+* {
     padding: 0;
     margin: 0;
     font-family: 'Josefin Sans', sans-serif;
     font-family: 'Roboto', sans-serif;
 }
 
-body{
+body {
     background-color: rgb(23, 23, 23);
 }
 
-.w-card{
+.w-card {
     width: 90%;
     max-width: 455px;
     background: linear-gradient(135deg, rgb(18, 28, 43), rgb(1, 46, 69));
@@ -20,14 +21,14 @@ body{
     text-align: center;
 }
 
-.searchbox{
+.searchbox {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-
 }
-.searchbox input{
+
+.searchbox input {
     outline: none;
     border: none;
     background: lightcyan;
@@ -37,7 +38,7 @@ body{
     border-radius: 28px;
 }
 
-button{
+button {
     border: none;
     outline: none;
     background: lightcyan;
@@ -47,24 +48,27 @@ button{
     cursor: pointer;
     transition: 0.3s;
 }
-button:hover{
+
+button:hover {
     background-color: rgb(166, 254, 254);
 }
 
-.weather-icon{
+.weather-icon {
     width: 200px;
     margin-top: 20px;
 }
-#temp{
+
+#temp {
     font-size: 70px;
     font-weight: 500;
 }
-#city-name{
+
+#city-name {
     font-size: 56px;
     font-weight: 400;
 }
 
-.additional-details{
+.additional-details {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -72,28 +76,63 @@ button:hover{
     margin-top: 45px;
 }
 
-.column{
+.column {
     display: flex;
     align-items: center;
     text-align: left;
 }
-.column img{
+
+.column img {
     width: 50px;
-    margin-right: 12px
+    margin-right: 12px;
 }
 
-.humidity, .wind{
+.humidity, .wind {
     font-size: 22px;
     font-weight: 500;
 }
 
-.weather{
+.weather {
     display: none;
 }
 
-.error{
+.error {
     font-size: 16px;
     text-align: left;
     margin: 8px 0px;
     display: none;
+}
+
+/* Forecast section */
+.forecast {
+    margin-top: 30px;
+    color: white;
+}
+
+.forecast-container {
+    display: flex;
+    justify-content: space-between;
+    overflow-x: auto;
+    padding: 10px;
+}
+
+.forecast-day {
+    text-align: center;
+    margin: 10px;
+    flex: 1;
+    min-width: 80px;
+}
+
+.forecast-day img {
+    width: 50px;
+}
+
+.forecast-day .day-temp {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.forecast-day .day-name {
+    font-size: 16px;
+    font-weight: 400;
 }
