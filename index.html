@@ -4,48 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="w-card">
 
+    <div class="w-card">
         <div class="searchbox">
             <input type="text" placeholder="Enter city name" spellcheck="false">
-            <button>Search</button>
+            <button><i class="fa-solid fa-magnifying-glass"></i> Search</button>
         </div>
+
         <div class="error">
-            <p>Invalid City name </p>
+            <p>Invalid City name</p>
         </div>
 
         <div class="weather">
             <img src="images/clouds.png" alt="" class="weather-icon">
             <h2 class="temperature" id="temp">22°c</h2>
             <h2 class="city" id="city-name">New Delhi</h2>
-            
+
             <div class="additional-details">
                 <div id="col1" class="column">
-                    <img src="images/humidity.png" alt="" id="humidity-img">
+                    <img src="images/humidity.png" alt="humidity-icon" id="humidity-img">
                     <div>
                         <p class="humidity">47%</p>
                         <p>Humidity</p>
                     </div>
                 </div>
+
                 <div id="col2" class="column">
-                    <img src="images/wind.png" alt="">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon"><!-- Wind Icon -->
+                        <path d="M288 32c0 17.7 14.3 32 32 32l32 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128c-17.7 0-32 14.3-32 32s14.3 32 32 32l320 0c53 0 96-43 96-96s-43-96-96-96L320 0c-17.7 0-32 14.3-32 32zm64 352c0 17.7 14.3 32 32 32l32 0c53 0 96-43 96-96s-43-96-96-96L32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-32 0c-17.7 0-32 14.3-32 32zM128 512l32 0c53 0 96-43 96-96s-43-96-96-96L32 320c-17.7 0-32 14.3-32 32s14.3 32 32 32l128 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-32 0c-17.7 0-32 14.3-32 32s14.3 32 32 32z"/>
+                    </svg>
                     <div>
                         <p class="wind">8.3 kmph</p>
                         <p>Wind Speed</p>
                     </div>
                 </div>
             </div>
-            
         </div>
     </div>
 
 <script src="script.js"></script>
-
 </body>
 </html>
