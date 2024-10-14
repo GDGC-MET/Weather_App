@@ -8,6 +8,11 @@
 body{
     background-color: rgb(23, 23, 23);
 }
+.error-message {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+}
 
 .w-card{
     width: 90%;
@@ -96,4 +101,25 @@ button:hover{
     text-align: left;
     margin: 8px 0px;
     display: none;
+}
+.suggestions-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #323232;
+    max-height: 150px;
+    overflow-y: auto;
+    display: none; /* Initially hidden */
+    position: absolute; /* Position it below the input */
+    background-color: rgb(82, 82, 82);
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.suggestions-list li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.suggestions-list li:hover {
+    background-color: #585656;
 }
