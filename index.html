@@ -13,10 +13,13 @@
     <div class="w-card">
 
         <div class="searchbox">
-            <input type="text" placeholder="Enter city name" spellcheck="false">
+            <input id="suggestions" type="text" placeholder="Enter city name" spellcheck="false" onkeyup="autocomplete()">
             <button>Search</button>
+            <ul id="suggestions-list" class="suggestions-list"></ul> <!-- Add this line -->
         </div>
         <div class="error">
+            <div id="error-message" class="error-message"></div>
+
             <p>Invalid City name </p>
         </div>
 
@@ -39,13 +42,12 @@
                         <p class="wind">8.3 kmph</p>
                         <p>Wind Speed</p>
                     </div>
+
                 </div>
             </div>
             
         </div>
     </div>
-
 <script src="script.js"></script>
-
 </body>
 </html>
