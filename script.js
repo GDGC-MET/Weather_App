@@ -71,3 +71,44 @@ searchBox.addEventListener('keyup', function(event) {
         checkWeather(searchBox.value);
     }
 });
+
+//Alert data
+const alerts = [
+    {
+        id: 1,
+        meassage:"Severe Thunderstorms warning in your are!",
+        type: "severe"
+    },
+    {
+        id: 2,
+        meassage:"High wind Advisory! Wind speed may go upto 60kmp/h",
+        type: "advisory"
+    },
+    {
+        id: 3,
+        meassage:"Heat Advisory! Stay hydrated!",
+        type: "advisory"
+    },
+]
+
+//Function to display weather alerts
+function displayalerts(){
+    const alertcontainer=document.getElementById("alert-container");
+    alertcontainer.innerHTML="";
+    alerts.forEach(alert => {
+        const alertDiv = document.createElement("div");
+        alertDiv.classList.add("alert");
+        alertDiv.textContent = alert;
+        alertDiv.addEventListener("click", () => {
+            alertDiv.classList.add("dismissed");
+            setTimeout(()=>{
+                alertDiv.remove();
+            },500);
+            })
+        
+        alertcontainer.appendChild(alertDiv);
+    });
+
+}
+document.addElementById('checkAlerts').addEventListener('click', displayAlerts);
+
