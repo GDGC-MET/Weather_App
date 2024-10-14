@@ -52,10 +52,26 @@ button:hover{
 }
 
 .weather-icon{
-    width: 200px;
-    margin-top: 20px;
+    width: 200px; 
+    animation: anim 3s infinite ;
+}
+@keyframes anim {
+    50%{
+        transform: translateY(15px);
+    }
+}
+.shake {
+    animation: shake 0.5s ease;
+}
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
 }
 #temp{
+    margin-top: 10px;
     font-size: 70px;
     font-weight: 500;
 }
