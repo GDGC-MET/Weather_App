@@ -13,13 +13,16 @@
     <div class="w-card">
 
         <div class="searchbox">
-            <input type="text" placeholder="Enter city name" spellcheck="false">
+            <input type="text" id="city-input" placeholder="Enter city name..." autocomplete="off">
             <button>Search</button>
+            
         </div>
+        <div class="autocomplete-list"></div>
         <div class="error">
             <p>Invalid City name </p>
         </div>
 
+        
         <div class="weather">
             <img src="images/clouds.png" alt="" class="weather-icon">
             <h2 class="temperature" id="temp">22°c</h2>
