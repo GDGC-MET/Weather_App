@@ -89,6 +89,25 @@ button:hover{
 
 .weather{
     display: none;
+    animation-name:colorful;
+    animation-duration:4s;
+    animation-iteration-count:infinite; 
+    color:black;
+    border-radius:20%;
+}
+@keyframes colorful{
+    0%{
+        background-color:red;
+    }
+    50%{
+        background-color:blue;
+    }
+    75%{
+        background-color:pink;
+    }
+    100%{
+        background-color:yellow;
+    }
 }
 
 .error{
@@ -96,4 +115,30 @@ button:hover{
     text-align: left;
     margin: 8px 0px;
     display: none;
+}
+
+
+.suggestions-list {
+    background-color: lightcyan;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 150px;
+    overflow-y: auto;
+    border-radius: 8px;
+    position: absolute;
+    width: fit-cotent;
+    z-index: 10;
+}
+
+.suggestions-list li {
+    padding: 8px;
+    cursor: pointer;
+    
+    color:black;
+    transition: background-color 0.3s;
+}
+
+.suggestions-list li:hover {
+    background-color: rgb(166, 254, 254);
 }
