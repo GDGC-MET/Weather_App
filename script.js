@@ -29,6 +29,8 @@ async function checkWeather(city){
     document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
 
     document.querySelector(".wind").innerHTML = data.wind.speed + " kmph";
+	
+	document.querySelector(".feel-like").innerHTML = Math.round(data.main.feels_like) + "°c";
 
     // Conditions for to check and display relevant image according to the weather conditions
 
