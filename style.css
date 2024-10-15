@@ -1,9 +1,13 @@
+
 /* Ensuring all elements have no padding and margin */
+=======
+
 * {
     padding: 0;
     margin: 0;
     font-family: 'Josefin Sans', sans-serif;
     font-family: 'Roboto', sans-serif;
+
   }
   
   /* Setting background color for body */
@@ -16,39 +20,87 @@
     width: 90%;
     max-width: 455px;
     background: linear-gradient(135deg, rgb(18, 28, 43), rgb(1, 46, 69));
+
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.w-card {
+    width: 100%;
+    max-width: 450px;
+    background: linear-gradient(135deg, rgb(23, 42, 69), rgb(18, 28, 43));
+
     color: white;
-    margin: 70px auto;
-    border-radius: 22px;
-    padding: 44px 38px;
+    border-radius: 20px;
+    padding: 40px 30px;
     text-align: center;
+
   }
   
   /* Styling for search box */
   .searchbox {
+
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.w-card:hover {
+    transform: scale(1.05);
+}
+
+.searchbox {
+
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
   }
   
   .searchbox input {
+=======
+    margin-bottom: 20px;
+}
+
+.searchbox input {
+
     outline: none;
     border: none;
-    background: lightcyan;
-    padding: 10px 28px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 12px 24px;
     flex: 1;
     font-size: 16px;
+
     border-radius: 28px;
   }
   
   button {
+=======
+    border-radius: 30px;
+    transition: background 0.3s;
+}
+
+.searchbox input:focus {
+    background: rgba(255, 255, 255, 1);
+}
+
+button {
+
     border: none;
     outline: none;
-    background: lightcyan;
-    border-radius: 28px;
-    padding: 10px 28px;
-    margin-left: 18px;
+    background: #00aaff;
+    border-radius: 30px;
+    padding: 12px 24px;
+    margin-left: 15px;
     cursor: pointer;
+
     transition: 0.3s;
   }
   
@@ -101,10 +153,72 @@
   }
   
   .error {
+=======
+    color: white;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #008ecc;
+    transform: scale(1.1);
+}
+
+.weather-icon {
+    width: 150px;
+    margin: 20px auto;
+    animation: fadeIn 1s ease-in-out;
+}
+
+#temp {
+    font-size: 64px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+#city-name {
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    animation: fadeIn 1.4s ease-in-out;
+}
+
+.additional-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    margin-top: 30px;
+}
+
+.column {
+    display: flex;
+    align-items: center;
+}
+
+.column img {
+    width: 40px;
+    margin-right: 10px;
+    filter: brightness(0.9);
+}
+
+.humidity, .wind {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.error {
+
     font-size: 16px;
     text-align: left;
-    margin: 8px 0px;
+    margin: 10px 0;
+    color: #ff4c4c;
+}
+
+.weather {
     display: none;
+
   }
   
   /* Adjusting the feels-like-container class for better spacing */
@@ -134,3 +248,18 @@
     margin-right: 7px;
   }
   
+=======
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
