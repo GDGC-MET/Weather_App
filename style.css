@@ -1,8 +1,26 @@
+
+/* Ensuring all elements have no padding and margin */
+=======
+
 * {
     padding: 0;
     margin: 0;
     font-family: 'Josefin Sans', sans-serif;
     font-family: 'Roboto', sans-serif;
+
+  }
+  
+  /* Setting background color for body */
+  body {
+    background-color: rgb(23, 23, 23);
+  }
+  
+  /* Weather card styling */
+  .w-card {
+    width: 90%;
+    max-width: 455px;
+    background: linear-gradient(135deg, rgb(18, 28, 43), rgb(1, 46, 69));
+
     box-sizing: border-box;
 }
 
@@ -18,10 +36,17 @@ body {
     width: 100%;
     max-width: 450px;
     background: linear-gradient(135deg, rgb(23, 42, 69), rgb(18, 28, 43));
+
     color: white;
     border-radius: 20px;
     padding: 40px 30px;
     text-align: center;
+
+  }
+  
+  /* Styling for search box */
+  .searchbox {
+
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
 }
@@ -31,20 +56,33 @@ body {
 }
 
 .searchbox {
+
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+  }
+  
+  .searchbox input {
+=======
     margin-bottom: 20px;
 }
 
 .searchbox input {
+
     outline: none;
     border: none;
     background: rgba(255, 255, 255, 0.8);
     padding: 12px 24px;
     flex: 1;
     font-size: 16px;
+
+    border-radius: 28px;
+  }
+  
+  button {
+=======
     border-radius: 30px;
     transition: background 0.3s;
 }
@@ -54,6 +92,7 @@ body {
 }
 
 button {
+
     border: none;
     outline: none;
     background: #00aaff;
@@ -61,6 +100,60 @@ button {
     padding: 12px 24px;
     margin-left: 15px;
     cursor: pointer;
+
+    transition: 0.3s;
+  }
+  
+  button:hover {
+    background-color: rgb(166, 254, 254);
+  }
+  
+  .weather-icon {
+    width: 200px;
+    margin-top: 20px;
+  }
+  
+  #temp {
+    font-size: 70px;
+    font-weight: 500;
+  }
+  
+  #city-name {
+    font-size: 56px;
+    font-weight: 400;
+  }
+  
+  .additional-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3px 6px;
+    margin-top: 45px;
+  }
+  
+  /* Columns for humidity, feels-like and wind */
+  .column {
+    display: flex;
+    align-items: center;
+  }
+  
+  .column img {
+    width: 50px;
+    margin-right: 9px;
+    padding: 1px 9px;
+  }
+  
+  .humidity, .wind, .feels-like {
+    font-size: 22px;
+    font-weight: 500;
+  }
+  
+  .weather {
+    display: none;
+  }
+  
+  .error {
+=======
     color: white;
     font-weight: bold;
     transition: background 0.3s, transform 0.3s;
@@ -116,6 +209,7 @@ button:hover {
 }
 
 .error {
+
     font-size: 16px;
     text-align: left;
     margin: 10px 0;
@@ -124,6 +218,37 @@ button:hover {
 
 .weather {
     display: none;
+
+  }
+  
+  /* Adjusting the feels-like-container class for better spacing */
+  .feels-like-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+  
+  .feels-like-container p {
+    margin: 0;
+  }
+  
+  .column div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .additional-details .column {
+    flex: 1;
+  }
+  
+  .additional-details .feels-like-container {
+    flex: 1;
+    margin-right: 7px;
+  }
+  
+=======
 }
 
 /* Animations */
@@ -137,3 +262,4 @@ button:hover {
         transform: translateY(0);
     }
 }
+

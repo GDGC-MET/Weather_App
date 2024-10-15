@@ -4,13 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
-
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <div class="w-card">
         <div class="searchbox">
             <input type="text" placeholder="Enter city name" spellcheck="false">
@@ -19,13 +16,16 @@
         <div class="error">
             <p>Invalid City name</p>
         </div>
-
         <div class="weather">
             <img src="images/clouds.png" alt="" class="weather-icon">
             <h2 class="temperature" id="temp">22°c</h2>
+
+            <h2 class="city" id="city-name">New Delhi</h2>
+
             <h2 class="city" id="city-name">New Delhi,</h2>
             <h2 class="state" id="city-name2">India</h2>
             
+
             <div class="additional-details">
                 <div id="col1" class="column">
                     <img src="images/humidity.png" alt="" id="humidity-img">
@@ -38,6 +38,13 @@
                         <p>Oct 14,2k24</p>
                     </div>
                 </div>
+                <div class="feels-like-container">
+                    <img src="https://creazilla-store.fra1.digitaloceanspaces.com/icons/3231740/temperature-feels-like-icon-md.png" alt="" id="feels-like-img" height="50px" width="50px">
+                    <div>
+                        <p class="feels-like">25°c</p>
+                        <p>Feels like</p>
+                    </div>
+                </div>
                 <div id="col2" class="column">
                     <img src="images/wind.png" alt="">
                     <div>
@@ -46,11 +53,14 @@
                     </div>
                 </div>
             </div>
-            
         </div>
     </div>
+
+    <script src="script.js"></script>
+=======
     
 <script src="script.js"></script>
+
 
 </body>
 </html>

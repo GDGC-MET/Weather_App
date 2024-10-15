@@ -1,6 +1,12 @@
+
+// Assigning all the variables and the api Key and Url
+
+const apiKey = "ea3f4fe45624121132ac09b9be8269ea";
+=======
 // Assigning all the variables and the API Key and URL
-const apiKey = "19f175c397782f927e89a4261b9f3ac5";
+
 const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
+
 const searchBox = document.querySelector(".searchbox input");
 const searchBtn = document.querySelector(".searchbox button");
 const weatherIcon = document.querySelector(".weather-icon");
@@ -8,18 +14,33 @@ const weatherIcon = document.querySelector(".weather-icon");
 // Function for the main task (getting the data from API and displaying it)
 async function checkWeather(city) {
     const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
+
+    //console.log(response);
+    if(response.status == 404){
+=======
     if (response.status == 404) {
+
         document.querySelector(".error").style.display = "block";
         document.querySelector(".weather").style.display = "none";
         searchBox.value = "";
     } else {
         document.querySelector(".error").style.display = "none";
     }
+
+    var data = await response.json();
+    console.log(data);
+=======
     
     const data = await response.json();
+
     document.querySelector(".city").innerHTML = data.name;
     document.querySelector(".temperature").innerHTML = Math.round(data.main.temp) + "°c";
     document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
+
+    console.log(data.main.feels_like );
+    document.querySelector(".feels-like").innerHTML = data.main.feels_like + "°c";
+=======
+
     document.querySelector(".wind").innerHTML = data.wind.speed + " kmph";
 
     // Conditions for checking and displaying relevant image according to the weather conditions
